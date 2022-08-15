@@ -1,0 +1,122 @@
+/************* CTA MOBILE STYLES **************/
+
+.cta{
+    padding-bottom: 40px;
+}
+
+.cta__logo{
+    margin: 0 auto;
+    position: relative;
+    top: -28px;
+}
+
+.cta__title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    margin-top: -5px;
+}
+
+.cta__buttons{
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+}
+
+.cta__button{
+    width: 75%;
+    padding: 19px 23px;
+    font-size: 1.45rem;
+}
+
+.cta__bookmark{
+    width: 21%;
+    border-radius: 50%;
+    background-image: url("/images/icon-bookmark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cta__bookmark-selected{
+    background-image: url("/images/icon-bookmarked.svg");
+}
+
+.cta__bookmark-selected::after{
+    content: "";
+    color: var(--Moderate-cyan);
+    padding: 19px 22px 19px 35px;
+    text-align: end;
+}
+
+/****************/
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    /************* CTA STYLES **************/
+   
+    .cta{
+        padding-bottom: 46px;
+    }
+
+    .cta__title{
+        font-weight: 700;
+        font-size: 2.8rem;
+        width: 100%;
+        position:relative;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .cta__buttons{
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        margin-top: 35px;
+    }
+
+    .cta__button{
+        width: 203px;
+        padding: 19px 27px;
+        font-size: 1.45rem;
+    }
+    
+    .cta__bookmark{
+        width: 54px;
+        margin-right: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    /* For this after to be behind the button 
+    the parent element of the buttons "cta__buttons" 
+    had to have a position relative and a z index of 1 */
+    .cta__bookmark::after{
+        content: "Bookmark";
+        font-size: 1.5rem;
+        font-weight: 700;
+        position: absolute;
+        background-color: var(--Soft-gray);
+        color: var(--Dark-gray);
+        padding: 19px 0px 19px 35px;
+        border-radius: 5000px;
+        width: 176px;
+        z-index: -1;
+        text-align: center;
+    }
+
+    .cta__bookmark-selected::after{
+        content: "Bookmarked";
+    }
+
+  
+
+    /****************/
+
+}

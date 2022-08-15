@@ -1,0 +1,75 @@
+
+
+/************* STATS MOBILE STYLES **************/
+
+.stats{
+    padding: 35px 0;
+}
+
+.stats__data{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 29px;
+}
+
+.stats__card{
+    text-align: center;
+}
+
+h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+hr{
+    width: 27%;
+    border-top: 1px solid lightgray;
+    margin:  0 auto;
+}
+
+progress{
+    width: 100%;
+    background-color: var(--Soft-gray);
+    border-radius: 5000px;
+    height: 12.2px;
+}
+
+progress::-moz-progress-bar,
+progress::-webkit-progress-value {
+    background: var(--Moderate-cyan);
+    border-radius: 5000px;
+}
+
+/****************/
+
+
+@media only screen and (min-width: 1200px) {
+
+    /************* STATS STYLES **************/
+
+    .stats{
+        padding: 45px 0;
+    }
+
+    .stats__data{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        margin-bottom: 31px;
+    }
+
+    .stats__card{
+        text-align: left;
+    }
+
+    hr{
+        width: 1px;
+        height: 50px;
+        border-left: 1px solid lightgray;
+        margin: 0 50px;
+    }
+
+    /****************/
+}

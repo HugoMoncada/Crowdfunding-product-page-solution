@@ -1,0 +1,198 @@
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 500;
+    overflow: auto;
+}
+
+.modal__title{
+    margin-bottom: 27px;
+}
+
+.modal__text{
+    margin-bottom: 20px;
+}
+
+.modal__content{
+    max-width: 730px;
+    margin: 185px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.close{
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.modal-card{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "radio modal-titles modal-titles modal-titles modal-titles modal-titles"
+                         "modal-text modal-text modal-text modal-text modal-text modal-text"  
+                         "modal-quantity modal-quantity . . . ." 
+                         "modal-footer modal-footer modal-footer modal-footer modal-footer modal-footer"
+                         ;
+    padding: 25px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    column-gap: 0;
+    row-gap: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"]{
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    grid-area: radio;
+}
+
+.modal-card__titles{
+    grid-area: modal-titles;
+    align-self: center;
+}
+
+.modal-card__title{
+    font-size: 1.4rem;
+    font-weight: 700;
+    grid-area: modal-title;
+}
+
+.modal-card__pledge{
+    font-size: 1.4rem;
+    color: var(--Moderate-cyan);
+}
+
+.modal-card__text{
+    grid-area: modal-text;
+}
+
+.modal-card__quantity{
+    grid-area: modal-quantity;
+    font-size: 1.8rem;
+}
+
+.modal-card__footer{
+    grid-area: modal-footer;
+    border-top: 1px solid lightgray;
+    display: none;
+}
+
+.modal-card__footer p{
+    margin-top: 25px;
+    margin-bottom: 15px; 
+}
+
+.modal-card__buttons{
+    height: 48px;
+    display: flex;
+    gap: 16px;
+}
+
+.modal-card__input{
+    background: url("/images/dollar.svg") no-repeat;
+    background-size: 14px;
+    height: 100%;
+    border-radius: 5000px;
+    border: 1px solid lightgray;
+    width: 45%;
+    background-position-y: center;
+    background-position-x: 20%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Modal Success */
+
+.modal__accept{
+    text-align: center;
+    display: none;
+}
+
+.icon-checked{
+    height: 64px;
+    background: url("/images/icon-check.svg") no-repeat;
+    background-position: center;
+    margin-bottom: 28px;
+}
+
+.accept-title{
+    margin-bottom: 25px;
+}
+
+.accept-text{
+    margin-bottom: 27px;
+}
+
+.error{
+    color: rgb(122, 6, 6);
+    text-align: center;
+    display: none;
+    font-size: 1.5rem;
+}
+
+
+@media only screen and (min-width: 1400px){
+
+    .modal-card{
+        grid-template-columns: auto repeat(5, 1fr);
+        grid-template-areas: "radio modal-titles modal-titles modal-titles modal-titles modal-quantity"
+                             "radio modal-text modal-text modal-text modal-text modal-text"  
+                             "modal-footer modal-footer modal-footer modal-footer modal-footer modal-footer"
+                             ;
+    }
+
+    input[type="radio"]{
+        margin-right: 20px;
+        align-self: auto;
+    }
+
+    .modal-card__titles{
+        display: flex;
+        gap: 10px;
+        align-self: left;
+    }
+
+    .modal-card__footer{
+        display: none;
+    }
+
+    .modal-card__footer_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .modal-card__buttons{
+        height: 46px;
+        justify-content: end;
+    }
+
+    .modal-card__footer p{
+        margin-top: 0;
+        margin-bottom: 0; 
+    }
+
+    .modal-card__input{
+        width: 32%;
+        background-position-x: 18%;
+    }
+
+    .modal__accept{
+        max-width: 540px;
+        padding: 30px;
+
+    }
+}

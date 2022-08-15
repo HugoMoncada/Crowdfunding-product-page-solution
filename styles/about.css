@@ -1,0 +1,101 @@
+.about{
+    padding: 44px 0;
+}
+
+.about__card{
+    border: 1px solid lightgrey;
+    padding: 23px;
+    border-radius: 5px;
+}
+
+.about__texts .title{
+    margin-bottom: 24px;
+}
+
+.about__texts .text, .about__card .text{
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.about__cards{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.about__header{
+    margin-bottom: 20px;
+}
+
+.about__title{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.about__amount{
+    color: var(--Moderate-cyan);
+    font-size: 1.4rem;
+}
+
+.quantity{
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+    float: inline-start;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 1200px) {
+   
+        
+    .about{
+        padding: 49px 0;
+    }
+
+    .about__texts .title{
+        margin-bottom: 32px;
+    }
+
+    .about__texts .text, .about__card .text{
+        line-height: 30px;
+    }
+
+    .about__cards{
+        margin-top: 35px;
+    }
+
+    .about__card{
+        padding: 35px 30px;
+    }
+
+    .about__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 23px;
+    }
+
+    .about__title{
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+
+    .about__amount{
+        color: var(--Moderate-cyan);
+        font-size: 1.45rem;
+        font-weight: 500;
+    }
+
+    .quantity{
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .about__footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+    

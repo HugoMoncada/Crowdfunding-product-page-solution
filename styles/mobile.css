@@ -1,0 +1,26 @@
+/* !!! MOBILE FIRST !!! */
+
+
+/************* MODAL MOBILE STYLES **************/
+
+.close{
+    cursor: pointer;
+}
+
+/****************/
+
+
+/************* MAIN MOBILE STYLES **************/
+
+main{
+    width: 87.2%;
+    max-width: 730px;
+    margin: 0 auto;
+    margin: 0 auto;
+    margin-top: -56px;
+    border-radius: 9px;
+    margin-bottom: 80px;
+}
+
+/****************/
+
